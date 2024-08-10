@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 
 app.use(cors());
-app.use(express.json());
+app.use(express.static("dist"));
 app.use(
 	morgan(":method :url :status :res[content-length] - :response-time ms :obj")
 );
